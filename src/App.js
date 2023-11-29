@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CreateEvent from "./pages/CreateEvent";
+import EventList from "./pages/EventList";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
+const App = () => {
+  const [events, setEvents] = useState([
+    {
+      name: "event 1",
+      startDate: "2023-11-20T12:43",
+      endDate: "2023-11-29T12:43",
+      location: "Bangalore",
+      description: "Event for developers",
+      bgColor: "#add9f5", // Default background color
+      textColor: "#000000", // Default text color
+      fontFamily: "Arial", // Default font family
+    },
+  ]);
+
+  const addEvent = (event) => {
+    setEvents([...events, event]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<EventList events={events} />} />
+        <Route path="/events" element={<CreateEvent onAddEvent={addEvent} />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

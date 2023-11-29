@@ -1,0 +1,23 @@
+/* Add this to your styles.css */
+
+.event-list {
+  margin-top: 20px;
+}
+
+.event-item {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-item h2 {
+  margin-top: 0;
+}
+
+.list-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

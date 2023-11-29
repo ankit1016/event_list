@@ -1,0 +1,21 @@
+.event-toggle {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  width: max-content;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.toggle-option {
+  padding: 5px 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-option.selected {
+  background-color: #ccc;
+  border-radius: 4px;
+}

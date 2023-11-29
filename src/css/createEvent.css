@@ -1,0 +1,88 @@
+/* Add this to your styles.css */
+
+.create-container {
+  display: flex;
+  background: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-event-form {
+  width: -webkit-fill-available;
+}
+
+.create-event-form textarea {
+  max-height: 80px;
+  min-height: 80px;
+}
+
+.create-event-form input,
+.create-event-form textarea,
+.create-event-form select,
+.create-event-form button {
+  display: block;
+  width: 98%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.create-event-form button {
+  background: #333;
+  color: white;
+  cursor: pointer;
+  margin: 10px auto 0;
+}
+
+.create-event-form button:hover {
+  background: #555;
+}
+
+.event-preview {
+  border-radius: 10px;
+  padding: 10px;
+  height: fit-content;
+  margin-left: 25px;
+  width: 85%;
+}
+
+.color-input {
+  margin: 10px 0;
+  padding: 10px;
+  background: lightgrey;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+
+.description {
+  width: -webkit-fill-available;
+  word-wrap: break-word;
+  max-height: 100px;
+  overflow: scroll;
+  margin: 0;
+}
+
+.event-button {
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 0.9rem;
+  border: 1px solid black;
+}
+
+.event-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.event-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
